@@ -120,7 +120,7 @@ font = pygame.font.SysFont("monospace", 30)
 
 #create sound
 bounce_sound = pygame.mixer.Sound("bounce.wav")
-
+pop_sound = pygame.mixer.Sound("brickpop.wav")
 #bikin object
 paddle = Paddle()
 ball = Ball()
@@ -161,7 +161,7 @@ while True:
             ball.dy *= -1
             dead_bricks.append(brick)
             paddle.score += 10
-            bounce_sound.play()
+            pop_sound.play()
 
     for brick in dead_bricks:
         bricks.remove(brick) #ngapus brick yang udah disingkirin
