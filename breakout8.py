@@ -150,6 +150,7 @@ for y in range(8): #1200-25 for every 50x
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
+            pygame.quit()
             sys.exit() #buat keluar game
     
         #keyboard events
@@ -220,4 +221,4 @@ while True:
     pygame.display.flip()
     
     #set fps
-    clock.tick(30)
+    clock.tick(60)
